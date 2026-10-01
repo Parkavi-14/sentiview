@@ -1,0 +1,627 @@
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.data-grid-container {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.grid-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.grid-title-section h2 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.grid-title-section p {
+  margin: 6px 0 0;
+
+  color: #8f9bb3;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.grid-toolbar {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 12px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUTTON BASE
+========================================================= */
+
+.grid-button {
+  border: none;
+
+  padding: 10px 16px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.grid-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.grid-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   BUTTON COLORS
+========================================================= */
+
+.add-column-button {
+  background: #2563eb;
+  color: white;
+}
+
+.delete-column-button {
+  background: #dc2626;
+  color: white;
+}
+
+.add-row-button {
+  background: #16a34a;
+  color: white;
+}
+
+.delete-row-button {
+  background: #ea580c;
+  color: white;
+}
+
+.fetch-button {
+  background: #7c3aed;
+  color: white;
+}
+
+
+/* =========================================================
+   SELECTION INFORMATION
+========================================================= */
+
+.selection-info {
+  display: flex;
+
+  gap: 20px;
+
+  min-height: 25px;
+
+  margin-bottom: 8px;
+
+  color: #8f9bb3;
+
+  font-size: 13px;
+}
+
+.selection-info strong {
+  margin-left: 5px;
+
+  color: #60a5fa;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: auto;
+
+  max-height: 500px;
+
+  border: 1px solid #27344a;
+
+  border-radius: 8px;
+
+  background: #0b1220;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.data-grid {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.data-grid thead {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 5;
+}
+
+.data-grid th {
+  height: 46px;
+
+  padding: 0 14px;
+
+  border: 1px solid #344158;
+
+  background: #1d2939;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-align: left;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   ROW NUMBER HEADER
+========================================================= */
+
+.row-number-header {
+  width: 55px !important;
+
+  text-align: center !important;
+
+  background: #172033 !important;
+
+  color: #7f8ba3 !important;
+}
+
+
+/* =========================================================
+   COLUMN HEADER
+========================================================= */
+
+.column-header {
+  cursor: pointer;
+
+  transition: background 0.15s ease;
+}
+
+.column-header:hover {
+  background: #263449 !important;
+}
+
+
+/* Selected column */
+
+.selected-column {
+  background: #1e40af !important;
+
+  box-shadow:
+    inset 0 -2px 0 #60a5fa;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.data-grid td {
+  height: 46px;
+
+  padding: 0;
+
+  border: 1px solid #27344a;
+
+  background: #0b1220;
+}
+
+
+/* =========================================================
+   ROW NUMBER
+========================================================= */
+
+.row-number {
+  width: 55px;
+
+  text-align: center;
+
+  padding: 0 !important;
+
+  background: #111a2b !important;
+
+  color: #78869e;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.row-number:hover {
+  background: #1a2940 !important;
+}
+
+
+/* Selected row number */
+
+.selected-row-number {
+  background: #1e40af !important;
+
+  color: white !important;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.grid-input {
+  width: 100%;
+
+  height: 46px;
+
+  box-sizing: border-box;
+
+  padding: 10px 14px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+}
+
+
+/* Placeholder */
+
+.grid-input::placeholder {
+  color: #46536a;
+}
+
+
+/* Input hover */
+
+.grid-input:hover {
+  background: #101a2b;
+}
+
+
+/* Input focus */
+
+.grid-input:focus {
+  background: #111d31;
+
+  box-shadow:
+    inset 0 0 0 2px #3b82f6;
+}
+
+
+/* =========================================================
+   SELECTED ROW
+========================================================= */
+
+.selected-row td {
+  background: #0f1b2e;
+}
+
+
+/* =========================================================
+   SELECTED COLUMN
+========================================================= */
+
+.selected-column-cell {
+  background: #0e1a2d !important;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  backdrop-filter: blur(4px);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.column-modal {
+  width: 420px;
+
+  max-width: calc(100vw - 40px);
+
+  background: #111827;
+
+  border: 1px solid #2d3a50;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.modal-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #263247;
+}
+
+.modal-header h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+/* Close button */
+
+.modal-close {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #8f9bb3;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  line-height: 1;
+}
+
+.modal-close:hover {
+  background: #1f2937;
+
+  color: white;
+}
+
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* Column name input */
+
+.column-name-input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 12px;
+
+  border: 1px solid #334155;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #0b1220;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 14px;
+}
+
+.column-name-input::placeholder {
+  color: #526078;
+}
+
+.column-name-input:focus {
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.modal-footer {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding: 16px 20px;
+
+  border-top: 1px solid #263247;
+}
+
+
+/* Cancel */
+
+.modal-cancel-button {
+  padding: 9px 16px;
+
+  border: 1px solid #374151;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #cbd5e1;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.modal-cancel-button:hover {
+  background: #1f2937;
+}
+
+
+/* Add */
+
+.modal-add-button {
+  padding: 9px 16px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.modal-add-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .data-grid-container {
+    padding: 12px;
+  }
+
+  .grid-toolbar {
+    gap: 6px;
+  }
+
+  .grid-button {
+    padding: 8px 11px;
+
+    font-size: 12px;
+  }
+
+  .column-modal {
+    width: 90%;
+  }
+
+}
