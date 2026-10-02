@@ -1,43 +1,13 @@
-# Frontend
-Frontend/node_modules/
-Frontend/dist/
-
-# Python
-__pycache__/
-*.py[cod]
-.venv/
+Backend/venv/
 venv/
-env/
-
-# ML / training outputs
-train_output/
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-
-# Large generated images/data
-image/
-*.zip
-*.tar
-*.tar.gz
-
-# Environment
-.env
-.env.*
-!.env.example
-
-# IDE
-.vscode/node_modules/
-Frontend/node_modules/
-Frontend/dist/
+.venv/
 __pycache__/
 *.pyc
-.venv/
-venv/
+Frontend/node_modules/
+Frontend/dist/
 train_output/
 *.pt
 *.pth
 *.ckpt
 *.safetensors
-.env
+.envBackend/venv/
